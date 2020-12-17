@@ -7,16 +7,32 @@
     <meta name="author" content="Vincent Labor">
     <meta description="A typing game built in vanilla Javascript">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script src="/script.js" defer></script>
     <title>Typer Screening</title>
 </head>
 
 <body>
     <main>
-        <section>
             <Nav>
                 <h4>Typer Screening</h4>
-                
+                <!-- Eventual Signin -->
             </Nav>
-        </section>
+
+            <div class="typingArea  flexCenterColumn">
+                <div class="typingWindow borderBlk pad2em">
+                    <p id="diffText">Difficulty</p>
+                    <form id="difficultySetting">
+                        <select value="" id="">
+                            <option name="Easy" id="">Easy</option>
+                            <option name="Medium" id="">Medium</option>
+                            <option name="Hard" id="">Hard</option>
+                        </select>
+                        <button type="submit">Start</button>
+                    </form>
+                    <input hidden placeholder="Type in word" id="textInput">
+                </div>
+            </div>
+
     </main>
 </body>
