@@ -84,7 +84,7 @@ textBar.addEventListener("input", (e) => {
 
   checkText(inputtedText, wordToBeTyped.innerHTML);
 
-  areWordsCorrect(inputtedText, wordToBeTyped.innerHTML;
+  areWordsCorrect(inputtedText, wordToBeTyped.innerHTML);
 
   // for(let i=0; i<wordToBeTyped; i++){
   //   if(inputtedText[i] === wordToBeTyped[i] ){
