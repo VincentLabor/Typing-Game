@@ -52,20 +52,19 @@ diffSetting.addEventListener("submit", (e) => {
   //have to add parameter of chosen diff value.
   chosenDifficulty(actualDiff.value);
   textBar.removeAttribute("hidden");
+  textBar.focus();
   returnToHomeTimer();
 });
 
 let areWordsCorrect = (userTxt, txtTobeTyped) => {
-  // userTxt = userTxt.split(" ");
-  // txtTobeTyped = txtTobeTyped.split(" ");
-
   let charVal = 0;
 
   for (let i = 0; i < userTxt.length; i++) {
     if (userTxt[i] === txtTobeTyped[i]) {
       // wordToBeTyped.style.color = "green";
       charVal++;
-      span.innerHTML ='<span class="green">' + userTxt.substring(0,charVal) + '</span>';
+      span.innerHTML =
+        '<span class="green">' + userTxt.substring(0, charVal) + "</span>";
     }
   }
 };
@@ -81,25 +80,8 @@ let checkText = (userTypedText, textToBeTyped) => {
 textBar.addEventListener("input", (e) => {
   let inputtedText = e.target.value;
   let charVal = 0;
-
+fetch()
   checkText(inputtedText, wordToBeTyped.innerHTML);
 
   areWordsCorrect(inputtedText, wordToBeTyped.innerHTML);
-
-  // for(let i=0; i<wordToBeTyped; i++){
-  //   if(inputtedText[i] === wordToBeTyped[i] ){
-  //     span.innerHTML = "e.target.value.substring(0,charVal)";
-  //   }
-  // }
-
-  // span.innerHTML = e.target.value.substring(0,1) + '<span class="green">' + e.target.value.substring(1,20) + '</span>';
 });
-
-// if(checkText(inputtedText, wordToBeTyped.innerHTML) === true){
-//   userScore.innerHTML = usersScore++;
-// }
-
-// if (inputtedText === wordToBeTyped.innerHTML) {
-//   // returnToHome();
-//   userScore.innerHTML = usersScore++;
-// }
